@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    build: ./ui/
+    links:
+      - api
+  api:
+    build: ./api/
