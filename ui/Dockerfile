@@ -1,13 +1,14 @@
 FROM node:9-alpine
 
 ENV PORT=3000
+ENV HOST=0.0.0.0
 
 # Create app directory
 ADD . /code
 WORKDIR /code
 
 # Install app dependencies
-COPY package.json /code
+COPY package*.json /code/
 RUN npm install
 
 # Bundle app source
