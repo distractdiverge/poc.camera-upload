@@ -8,10 +8,6 @@
     "build": "next build",
     "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexlapinski/camera-upload-poc.git"
-  },
   "keywords": [
     "upload",
     "camera",

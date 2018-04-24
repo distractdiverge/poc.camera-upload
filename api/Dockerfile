@@ -1,13 +1,18 @@
 FROM node:9-alpine
 
+ENV HOST=0.0.0.0
+ENV PORT=5000
+
 # Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /code
+WORKDIR /code
 
 # Install app dependencies
-COPY package.json /usr/src/app/
+COPY package*.json /code/
 RUN npm install
 
 # Bundle app source
-COPY . /usr/src/app
-RUN npm start
+COPY . /code
+
+EXPOSE $PORT
+CMD ["npm", "start"]
