@@ -15,8 +15,8 @@ services:
       - HOST=0.0.0.0
     ports:
       - "5000:5000"
-    #volumes:
-    #  - ./api:/code
+    volumes:
+      - ./api:/code
     depends_on:
       - redis
   redis:
